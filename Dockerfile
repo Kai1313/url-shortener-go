@@ -22,7 +22,8 @@ WORKDIR /root/
 
 # Copy binary from builder
 COPY --from=builder /app/main .
-COPY --from=builder /app/.env .env
+
+# Environment variables are injected at runtime (docker run -e or docker-compose)
 
 EXPOSE 8080
 
