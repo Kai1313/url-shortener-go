@@ -1,0 +1,40 @@
+# --- Build output ---
+/bin/
+/build/
+/tmp/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# --- Dependencies ---
+vendor/
+
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- IDE ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Misc ---
+*.tmp
