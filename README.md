@@ -56,7 +56,7 @@ backend/
 ├── migrations/
 │   └── init.sql             # Manual SQL migration (optional)
 ├── Dockerfile
-├── docker-compose.yml
+├── .env.example
 ├── go.mod
 ├── go.sum
 └── .env.example
@@ -76,7 +76,7 @@ backend/
 Copy the example and adjust values:
 
 ```bash
-cp env-example .env
+cp .env.example .env
 ```
 
 | Variable          | Default                                 | Description                |

@@ -9,6 +9,7 @@ import (
     "github.com/Kai1313/url-shortener-fullstack/backend/internal/handlers"
     "github.com/Kai1313/url-shortener-fullstack/backend/internal/middleware"
     "github.com/Kai1313/url-shortener-fullstack/backend/internal/models"
+    "github.com/Kai1313/url-shortener-fullstack/backend/internal/repository"
     "github.com/gin-contrib/cors"
     "github.com/gin-gonic/gin"
 )
@@ -32,8 +33,8 @@ func main() {
     redisClient := database.InitRedis(cfg)
 
     // Initialize repositories
-    urlRepo := database.NewURLRepository(db, redisClient)
-    userRepo := database.NewUserRepository(db)
+    urlRepo := repository.NewURLRepository(db, redisClient)
+    userRepo := repository.NewUserRepository(db)
 
     // Initialize handlers
     authHandler := handlers.NewAuthHandler(userRepo, cfg)
